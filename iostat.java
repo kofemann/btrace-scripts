@@ -56,7 +56,8 @@ import static com.sun.btrace.BTraceUtils.*;
     public static void onEvent() {
         println("");
         println("---------------------------------------------");
-        Aggregations.printAggregation("Count", count);
+        Aggregations.printAggregation("Count in 2s.", count);
+        Aggregations.clearAggregation(count);
 
         println("");
         Aggregations.printAggregation("Average Write, MB/s", averageWrite);
